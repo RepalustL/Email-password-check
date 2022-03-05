@@ -4,7 +4,7 @@ import re
 pattern_email = re.compile(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")
 
 
-def email_check(email):
+def email_check():
     while True:
         # User is asked to enter an email
         email = input('Please enter your email: ')

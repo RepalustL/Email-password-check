@@ -27,11 +27,11 @@ def pwned_api_check(pw):
     return get_pw_leaks_count(response, tail)
 
 
-def pwned_func(args):
-    for pw in args:
-        count = pwned_api_check(pw)
+def pwned_func(*args):
+    for password in args:
+        count = pwned_api_check(password)
         if count:
-            print(f'{pw} was found {count} times... you should change your password')
+            print(f'{password} was found {count} times... you should change your password')
         else:
-            print(f'{pw} was NOT found, good password!')
+            print(f'{password} was NOT found, good password!')
         return 'done'
